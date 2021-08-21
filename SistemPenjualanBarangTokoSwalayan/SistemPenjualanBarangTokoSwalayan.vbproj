@@ -91,6 +91,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Laporan\rptLaporanPembelianPerPermasok.Designer.vb">
+      <DependentUpon>rptLaporanPembelianPerPermasok.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\rptLaporanPembelianPerPermasok.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Laporan\rptLaporanPembelianPerTanggal.Designer.vb">
+      <DependentUpon>rptLaporanPembelianPerTanggal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\rptLaporanPembelianPerTanggal.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Laporan\rptLaporanPenjualan.Designer.vb">
       <DependentUpon>rptLaporanPenjualan.vb</DependentUpon>
     </Compile>
@@ -251,6 +263,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Laporan\rptLaporanPembelianPerPermasok.resx">
+      <DependentUpon>rptLaporanPembelianPerPermasok.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\rptLaporanPembelianPerTanggal.resx">
+      <DependentUpon>rptLaporanPembelianPerTanggal.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Laporan\rptLaporanPenjualan.resx">
       <DependentUpon>rptLaporanPenjualan.vb</DependentUpon>
     </EmbeddedResource>

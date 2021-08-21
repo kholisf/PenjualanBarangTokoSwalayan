@@ -79,6 +79,54 @@ FROM            penjualan_detil a INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_laporanpembelianpertanggalTableAdapter" GeneratorDataComponentClassName="view_laporanpembelianpertanggalTableAdapter" Name="view_laporanpembelianpertanggal" UserDataComponentName="view_laporanpembelianpertanggalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="toko_swalayanConnectionString (MySettings)" DbObjectName="toko_swalayan.view_laporanpembelianpertanggal" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Tanggal`, `NomorTransaksi`, `KodePemasok`, `NamaPemasok`, `JumlahItem`, `Potongan`, `TotalPembelian`, `TotalPembayaran`, `Keterangan`, `KodePegawai` FROM `toko_swalayan`.`view_laporanpembelianpertanggal`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Tanggal" DataSetColumn="Tanggal" />
+              <Mapping SourceColumn="NomorTransaksi" DataSetColumn="NomorTransaksi" />
+              <Mapping SourceColumn="KodePemasok" DataSetColumn="KodePemasok" />
+              <Mapping SourceColumn="NamaPemasok" DataSetColumn="NamaPemasok" />
+              <Mapping SourceColumn="JumlahItem" DataSetColumn="JumlahItem" />
+              <Mapping SourceColumn="Potongan" DataSetColumn="Potongan" />
+              <Mapping SourceColumn="TotalPembelian" DataSetColumn="TotalPembelian" />
+              <Mapping SourceColumn="TotalPembayaran" DataSetColumn="TotalPembayaran" />
+              <Mapping SourceColumn="Keterangan" DataSetColumn="Keterangan" />
+              <Mapping SourceColumn="KodePegawai" DataSetColumn="KodePegawai" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_laporanpenjualanTableAdapter" GeneratorDataComponentClassName="view_laporanpenjualanTableAdapter" Name="view_laporanpenjualan" UserDataComponentName="view_laporanpenjualanTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="toko_swalayanConnectionString (MySettings)" DbObjectName="toko_swalayan.view_laporanpenjualan" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `NomorTransaksi`, `Tanggal`, `Potongan`, `JumlahItem`, `TotalPenjualan`, `TotalPembayaran`, `JumlahUang`, `KodePegawai` FROM `toko_swalayan`.`view_laporanpenjualan`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NomorTransaksi" DataSetColumn="NomorTransaksi" />
+              <Mapping SourceColumn="Tanggal" DataSetColumn="Tanggal" />
+              <Mapping SourceColumn="Potongan" DataSetColumn="Potongan" />
+              <Mapping SourceColumn="JumlahItem" DataSetColumn="JumlahItem" />
+              <Mapping SourceColumn="TotalPenjualan" DataSetColumn="TotalPenjualan" />
+              <Mapping SourceColumn="TotalPembayaran" DataSetColumn="TotalPembayaran" />
+              <Mapping SourceColumn="JumlahUang" DataSetColumn="JumlahUang" />
+              <Mapping SourceColumn="KodePegawai" DataSetColumn="KodePegawai" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -187,6 +235,78 @@ FROM            penjualan_detil a INNER JOIN
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="view_laporanpembelianpertanggal" msprop:Generator_TableClassName="view_laporanpembelianpertanggalDataTable" msprop:Generator_TableVarName="tableview_laporanpembelianpertanggal" msprop:Generator_TablePropName="view_laporanpembelianpertanggal" msprop:Generator_RowDeletingName="view_laporanpembelianpertanggalRowDeleting" msprop:Generator_RowChangingName="view_laporanpembelianpertanggalRowChanging" msprop:Generator_RowEvHandlerName="view_laporanpembelianpertanggalRowChangeEventHandler" msprop:Generator_RowDeletedName="view_laporanpembelianpertanggalRowDeleted" msprop:Generator_UserTableName="view_laporanpembelianpertanggal" msprop:Generator_RowChangedName="view_laporanpembelianpertanggalRowChanged" msprop:Generator_RowEvArgName="view_laporanpembelianpertanggalRowChangeEvent" msprop:Generator_RowClassName="view_laporanpembelianpertanggalRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tanggal" msprop:Generator_ColumnVarNameInTable="columnTanggal" msprop:Generator_ColumnPropNameInRow="Tanggal" msprop:Generator_ColumnPropNameInTable="TanggalColumn" msprop:Generator_UserColumnName="Tanggal" type="xs:dateTime" />
+              <xs:element name="NomorTransaksi" msprop:Generator_ColumnVarNameInTable="columnNomorTransaksi" msprop:Generator_ColumnPropNameInRow="NomorTransaksi" msprop:Generator_ColumnPropNameInTable="NomorTransaksiColumn" msprop:Generator_UserColumnName="NomorTransaksi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KodePemasok" msprop:Generator_ColumnVarNameInTable="columnKodePemasok" msprop:Generator_ColumnPropNameInRow="KodePemasok" msprop:Generator_ColumnPropNameInTable="KodePemasokColumn" msprop:Generator_UserColumnName="KodePemasok">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NamaPemasok" msprop:Generator_ColumnVarNameInTable="columnNamaPemasok" msprop:Generator_ColumnPropNameInRow="NamaPemasok" msprop:Generator_ColumnPropNameInTable="NamaPemasokColumn" msprop:Generator_UserColumnName="NamaPemasok">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="JumlahItem" msprop:Generator_ColumnVarNameInTable="columnJumlahItem" msprop:Generator_ColumnPropNameInRow="JumlahItem" msprop:Generator_ColumnPropNameInTable="JumlahItemColumn" msprop:Generator_UserColumnName="JumlahItem" type="xs:long" />
+              <xs:element name="Potongan" msprop:Generator_ColumnVarNameInTable="columnPotongan" msprop:Generator_ColumnPropNameInRow="Potongan" msprop:Generator_ColumnPropNameInTable="PotonganColumn" msprop:Generator_UserColumnName="Potongan" type="xs:double" minOccurs="0" />
+              <xs:element name="TotalPembelian" msprop:Generator_ColumnVarNameInTable="columnTotalPembelian" msprop:Generator_ColumnPropNameInRow="TotalPembelian" msprop:Generator_ColumnPropNameInTable="TotalPembelianColumn" msprop:Generator_UserColumnName="TotalPembelian" type="xs:double" minOccurs="0" />
+              <xs:element name="TotalPembayaran" msprop:Generator_ColumnVarNameInTable="columnTotalPembayaran" msprop:Generator_ColumnPropNameInRow="TotalPembayaran" msprop:Generator_ColumnPropNameInTable="TotalPembayaranColumn" msprop:Generator_UserColumnName="TotalPembayaran" type="xs:double" minOccurs="0" />
+              <xs:element name="Keterangan" msprop:Generator_ColumnVarNameInTable="columnKeterangan" msprop:Generator_ColumnPropNameInRow="Keterangan" msprop:Generator_ColumnPropNameInTable="KeteranganColumn" msprop:Generator_UserColumnName="Keterangan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KodePegawai" msprop:Generator_ColumnVarNameInTable="columnKodePegawai" msprop:Generator_ColumnPropNameInRow="KodePegawai" msprop:Generator_ColumnPropNameInTable="KodePegawaiColumn" msprop:Generator_UserColumnName="KodePegawai">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="view_laporanpenjualan" msprop:Generator_TableClassName="view_laporanpenjualanDataTable" msprop:Generator_TableVarName="tableview_laporanpenjualan" msprop:Generator_TablePropName="view_laporanpenjualan" msprop:Generator_RowDeletingName="view_laporanpenjualanRowDeleting" msprop:Generator_RowChangingName="view_laporanpenjualanRowChanging" msprop:Generator_RowEvHandlerName="view_laporanpenjualanRowChangeEventHandler" msprop:Generator_RowDeletedName="view_laporanpenjualanRowDeleted" msprop:Generator_UserTableName="view_laporanpenjualan" msprop:Generator_RowChangedName="view_laporanpenjualanRowChanged" msprop:Generator_RowEvArgName="view_laporanpenjualanRowChangeEvent" msprop:Generator_RowClassName="view_laporanpenjualanRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NomorTransaksi" msprop:Generator_ColumnVarNameInTable="columnNomorTransaksi" msprop:Generator_ColumnPropNameInRow="NomorTransaksi" msprop:Generator_ColumnPropNameInTable="NomorTransaksiColumn" msprop:Generator_UserColumnName="NomorTransaksi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tanggal" msprop:Generator_ColumnVarNameInTable="columnTanggal" msprop:Generator_ColumnPropNameInRow="Tanggal" msprop:Generator_ColumnPropNameInTable="TanggalColumn" msprop:Generator_UserColumnName="Tanggal" type="xs:dateTime" />
+              <xs:element name="Potongan" msprop:Generator_ColumnVarNameInTable="columnPotongan" msprop:Generator_ColumnPropNameInRow="Potongan" msprop:Generator_ColumnPropNameInTable="PotonganColumn" msprop:Generator_UserColumnName="Potongan" type="xs:double" />
+              <xs:element name="JumlahItem" msprop:Generator_ColumnVarNameInTable="columnJumlahItem" msprop:Generator_ColumnPropNameInRow="JumlahItem" msprop:Generator_ColumnPropNameInTable="JumlahItemColumn" msprop:Generator_UserColumnName="JumlahItem" type="xs:long" />
+              <xs:element name="TotalPenjualan" msprop:Generator_ColumnVarNameInTable="columnTotalPenjualan" msprop:Generator_ColumnPropNameInRow="TotalPenjualan" msprop:Generator_ColumnPropNameInTable="TotalPenjualanColumn" msprop:Generator_UserColumnName="TotalPenjualan" type="xs:double" minOccurs="0" />
+              <xs:element name="TotalPembayaran" msprop:Generator_ColumnVarNameInTable="columnTotalPembayaran" msprop:Generator_ColumnPropNameInRow="TotalPembayaran" msprop:Generator_ColumnPropNameInTable="TotalPembayaranColumn" msprop:Generator_UserColumnName="TotalPembayaran" type="xs:double" minOccurs="0" />
+              <xs:element name="JumlahUang" msprop:Generator_ColumnVarNameInTable="columnJumlahUang" msprop:Generator_ColumnPropNameInRow="JumlahUang" msprop:Generator_ColumnPropNameInTable="JumlahUangColumn" msprop:Generator_UserColumnName="JumlahUang" type="xs:double" />
+              <xs:element name="KodePegawai" msprop:Generator_ColumnVarNameInTable="columnKodePegawai" msprop:Generator_ColumnPropNameInRow="KodePegawai" msprop:Generator_ColumnPropNameInTable="KodePegawaiColumn" msprop:Generator_UserColumnName="KodePegawai">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

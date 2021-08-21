@@ -90,7 +90,13 @@
 
     End Sub
     Sub cetak()
-        GridControl1.ShowRibbonPrintPreview()
+        Select Case txtKategori.SelectedIndex
+            Case 0
+                ReportLaporanPembelianPertanggal(txtTanggalAwal.DateTime, txtTanggalAkhir.DateTime)
+            Case 1
+                GridControl1.ShowRibbonPrintPreview()
+        End Select
+
 
     End Sub
     Sub DetilLaporan()
