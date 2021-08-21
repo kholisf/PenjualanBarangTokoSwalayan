@@ -56,4 +56,27 @@ Module ReportModule
             PrintTool.ShowRibbonPreviewDialog()
         End Using
     End Sub
+    Sub ReportLaporanPenjualanDetil(ByVal nomorTransaksi As String, ByVal tanggal As Date, ByVal namapegawai As String)
+        EksekusiQuery("create or replace view view_laporanpenjualandetil as select a.KodeBarang,b.NamaBarang,a.HargaSatuan,a.Jumlah,(a.HargaSatuan*a.Jumlah) as SubTotalHarga,a.PersenDiskon,((a.HargaSatuan*a.Jumlah) *(PersenDiskon/100))as JumlahDiskon,((a.HargaSatuan*a.Jumlah)-((a.HargaSatuan*a.Jumlah) *(PersenDiskon/100))) as TotalHarga from (penjualan_detil a inner join barang b on a.Kodebarang=b.Kodebarang) where a.NomorTransaksi='" & nomorTransaksi & "'  order by Namabarang asc")
+        Dim rpt As New rptLaporanPenjualanDetil
+        rpt.txtTanggal.Text = " " & Format(tanggal, "dddd, dd MMMM yyyy")
+        rpt.txtNomorTransaksi.Text = " " & nomorTransaksi
+        rpt.txtPegawai.Text = " " & namapegawai
+        Using PrintTool As New ReportPrintTool(rpt)
+            PrintTool.ShowRibbonPreviewDialog()
+        End Using
+
+    End Sub
+    Sub ReportLaporanPembelianDetil(ByVal nomorTransaksi As String, ByVal tanggal As Date, ByVal namapegawai As String, ByVal namapemasok As String)
+        EksekusiQuery("create or replace view view_laporanpembeliandetil as select a.KodeBarang,b.NamaBarang,a.HargaSatuan,a.Jumlah,(a.HargaSatuan*a.Jumlah) as SubTotalHarga,a.PersenDiskon,((a.HargaSatuan*a.Jumlah) *(PersenDiskon/100))as JumlahDiskon,((a.HargaSatuan*a.Jumlah)-((a.HargaSatuan*a.Jumlah) *(PersenDiskon/100))) as TotalHarga from (pembelian_detil a inner join barang b on a.Kodebarang=b.Kodebarang) where a.NomorTransaksi='" & nomorTransaksi & "'  order by Namabarang asc")
+        Dim rpt As New rptLaporanPembelianDetil
+        rpt.txtTanggala.Text = " " & Format(tanggal, "dddd, dd MMMM yyyy")
+        rpt.txtNomorTransaksi.Text = " " & nomorTransaksi
+        rpt.txtPegawai.Text = " " & namapegawai
+        rpt.txtPemasok.Text = " " & namapemasok
+        Using PrintTool As New ReportPrintTool(rpt)
+            PrintTool.ShowRibbonPreviewDialog()
+        End Using
+
+    End Sub
 End Module

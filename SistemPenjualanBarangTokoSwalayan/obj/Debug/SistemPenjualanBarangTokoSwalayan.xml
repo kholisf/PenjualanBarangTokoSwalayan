@@ -131,6 +131,14 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet.view_laporanpenjualandetilDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet.view_laporanpembeliandetilDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet.view_notaPenjualanRow">
 	<summary>
 Represents strongly named DataRow class.
@@ -155,6 +163,14 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet.view_laporanpenjualandetilRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet.view_laporanpembeliandetilRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet.view_notaPenjualanRowChangeEvent">
 	<summary>
 Row event argument class
@@ -176,6 +192,14 @@ Row event argument class
 Row event argument class
 </summary>
 </member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet.view_laporanpembelianperpemasokRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet.view_laporanpenjualandetilRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet.view_laporanpembeliandetilRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -204,6 +228,14 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSetTableAdapters.view_laporanpembelianperpemasokTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSetTableAdapters.view_laporanpenjualandetilTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSetTableAdapters.view_laporanpembeliandetilTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

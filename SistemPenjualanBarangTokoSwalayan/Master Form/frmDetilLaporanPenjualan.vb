@@ -15,7 +15,7 @@
 
     End Sub
     Sub Cetak()
-        GridView1.ShowRibbonPrintPreview()
+        ReportLaporanPenjualanDetil(txtNomorTransaksi.Text, txtTanggal.DateTime, NamaPegawai & " ( " & KodePegawai & " ) ")
     End Sub
 
     Private Sub frmDetilLaporanPenjualan_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown

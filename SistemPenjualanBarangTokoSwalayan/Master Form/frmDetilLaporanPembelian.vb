@@ -14,7 +14,7 @@
         'GridviewEditTampilan(GridView1,,"HargaSatuan
     End Sub
     Sub Cetak()
-        GridView1.ShowRibbonPrintPreview()
+        ReportLaporanPembelianDetil(txtNomorTransaksi.Text, txtTanggal.DateTime, NamaPegawai & "(" & KodePegawai & ")", NamaPemasok & "(" & KodePemasok & ")")
     End Sub
 
     Private Sub frmDetilLaporanPembelian_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
