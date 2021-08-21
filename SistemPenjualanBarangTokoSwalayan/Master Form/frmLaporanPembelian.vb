@@ -20,7 +20,7 @@
                 End If
                 Tampung = EksekusiQuery("select a.Tanggal,a.NomorTransaksi,a.KodePemasok,b.NamaPemasok,count(c.KodeBarang) as JumlahItem,a.Potongan,sum((c.HargaSatuan*c.Jumlah) -(c.HargaSatuan*c.Jumlah)*(c.PersenDiskon/100)) as TotalPembelian,(sum((c.HargaSatuan*c.Jumlah)-(c.HargaSatuan*c.Jumlah)*(c.PersenDiskon/100))-a.Potongan) as TotalPembayaran,b.Keterangan,a.KodePegawai from (pembelian a inner join pemasok b on a.KodePemasok=b.KodePemasok inner join pembelian_detil c on a.NomorTransaksi=c.NomorTransaksi) where a.KodePemasok='" & txtKodePemasok.Text & "' group by a.NomorTransaksi;")
                 GridControl1.DataSource = Tampung
-                GridviewEditTampilan(GridView1, "KodePemasok,KodePegawai", "Potonngan,TotalPembelian,TotalPembayaran", "TotalPembelian,TotalPembayaran")
+                GridviewEditTampilan(GridView1, "KodePemasok,KodePegawai,NamaPemasok", "Potongan,TotalPembelian,TotalPembayaran", "TotalPembelian,TotalPembayaran")
         End Select
 
 
@@ -94,7 +94,7 @@
             Case 0
                 ReportLaporanPembelianPertanggal(txtTanggalAwal.DateTime, txtTanggalAkhir.DateTime)
             Case 1
-                GridControl1.ShowRibbonPrintPreview()
+                ReportLaporanPembelianPerPemasok(txtKodePemasok.Text, txtNamaPemasok.Text)
         End Select
 
 

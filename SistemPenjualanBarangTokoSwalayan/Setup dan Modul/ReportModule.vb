@@ -47,5 +47,13 @@ Module ReportModule
             PrintTool.ShowRibbonPreviewDialog()
         End Using
     End Sub
+    Sub ReportLaporanPembelianPerPemasok(ByVal kodepemasok As String, ByVal namapemasok As String)
+        EksekusiQuery("create or replace view view_laporanpembelianperpemasok as select a.Tanggal,a.NomorTransaksi,a.KodePemasok,b.NamaPemasok,count(c.KodeBarang) as JumlahItem,a.Potongan,sum((c.HargaSatuan*c.Jumlah) -(c.HargaSatuan*c.Jumlah)*(c.PersenDiskon/100)) as TotalPembelian,(sum((c.HargaSatuan*c.Jumlah)-(c.HargaSatuan*c.Jumlah)*(c.PersenDiskon/100))-a.Potongan) as TotalPembayaran,b.Keterangan,a.KodePegawai from (pembelian a inner join pemasok b on a.KodePemasok=b.KodePemasok inner join pembelian_detil c on a.NomorTransaksi=c.NomorTransaksi) where a.KodePemasok='" & kodepemasok & "' group by a.NomorTransaksi")
+        Dim rpt As New rptLaporanPembelianPerPermasok
+        rpt.txtTanggalAwal.Text = " " & namapemasok & " (" & kodepemasok & ") "
 
+        Using PrintTool As New ReportPrintTool(rpt)
+            PrintTool.ShowRibbonPreviewDialog()
+        End Using
+    End Sub
 End Module
