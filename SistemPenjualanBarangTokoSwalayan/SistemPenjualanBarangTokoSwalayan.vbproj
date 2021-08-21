@@ -91,6 +91,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Laporan\rptLaporanPenjualan.Designer.vb">
+      <DependentUpon>rptLaporanPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\rptLaporanPenjualan.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Laporan\rptLaporanDataBarang.Designer.vb">
       <DependentUpon>rptLaporanDataBarang.vb</DependentUpon>
     </Compile>
@@ -245,6 +251,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Laporan\rptLaporanPenjualan.resx">
+      <DependentUpon>rptLaporanPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Laporan\rptLaporanDataBarang.resx">
       <DependentUpon>rptLaporanDataBarang.vb</DependentUpon>
     </EmbeddedResource>

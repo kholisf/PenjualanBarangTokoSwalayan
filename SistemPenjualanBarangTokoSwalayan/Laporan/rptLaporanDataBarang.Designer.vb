@@ -126,7 +126,7 @@ Partial Public Class rptLaporanDataBarang
         Me.XrTableCell15.Dpi = 100.0!
         Me.XrTableCell15.Name = "XrTableCell15"
         Me.XrTableCell15.StylePriority.UseTextAlignment = False
-        Me.XrTableCell15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        Me.XrTableCell15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         Me.XrTableCell15.Weight = 0.43725312554090456R
         '
         'XrTableCell16
@@ -135,7 +135,7 @@ Partial Public Class rptLaporanDataBarang
         Me.XrTableCell16.Dpi = 100.0!
         Me.XrTableCell16.Name = "XrTableCell16"
         Me.XrTableCell16.StylePriority.UseTextAlignment = False
-        Me.XrTableCell16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        Me.XrTableCell16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         Me.XrTableCell16.Weight = 0.4234184147254R
         '
         'XrTableCell17
@@ -176,7 +176,7 @@ Partial Public Class rptLaporanDataBarang
         Me.XrTableCell20.Name = "XrTableCell20"
         Me.XrTableCell20.StylePriority.UseTextAlignment = False
         Me.XrTableCell20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell20.Weight = 0.64573100777120962R
+        Me.XrTableCell20.Weight = 0.5382684053384883R
         '
         'XrTableCell21
         '
@@ -184,8 +184,8 @@ Partial Public Class rptLaporanDataBarang
         Me.XrTableCell21.Dpi = 100.0!
         Me.XrTableCell21.Name = "XrTableCell21"
         Me.XrTableCell21.StylePriority.UseTextAlignment = False
-        Me.XrTableCell21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell21.Weight = 0.79981837116665133R
+        Me.XrTableCell21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify
+        Me.XrTableCell21.Weight = 0.90728097359937265R
         '
         'TopMargin
         '
@@ -252,7 +252,7 @@ Partial Public Class rptLaporanDataBarang
         '
         Me.txtKondisiBarang.Dpi = 100.0!
         Me.txtKondisiBarang.Font = New System.Drawing.Font("Times New Roman", 11.0!)
-        Me.txtKondisiBarang.LocationFloat = New DevExpress.Utils.PointFloat(198.7036!, 46.0!)
+        Me.txtKondisiBarang.LocationFloat = New DevExpress.Utils.PointFloat(168.4952!, 46.0!)
         Me.txtKondisiBarang.Name = "txtKondisiBarang"
         Me.txtKondisiBarang.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.txtKondisiBarang.SizeF = New System.Drawing.SizeF(208.5917!, 23.0!)
@@ -265,13 +265,13 @@ Partial Public Class rptLaporanDataBarang
         '
         Me.XrLabel3.Dpi = 100.0!
         Me.XrLabel3.Font = New System.Drawing.Font("Times New Roman", 11.0!)
-        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 46.00001!)
+        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 46.0!)
         Me.XrLabel3.Name = "XrLabel3"
         Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel3.SizeF = New System.Drawing.SizeF(198.7036!, 23.0!)
+        Me.XrLabel3.SizeF = New System.Drawing.SizeF(168.4952!, 23.0!)
         Me.XrLabel3.StylePriority.UseFont = False
         Me.XrLabel3.StylePriority.UseTextAlignment = False
-        Me.XrLabel3.Text = "Data Barang dengan Kondisi :"
+        Me.XrLabel3.Text = "Kondisi Laporan Barang :"
         Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'XrLabel1
@@ -284,7 +284,7 @@ Partial Public Class rptLaporanDataBarang
         Me.XrLabel1.SizeF = New System.Drawing.SizeF(727.0!, 23.0!)
         Me.XrLabel1.StylePriority.UseFont = False
         Me.XrLabel1.StylePriority.UseTextAlignment = False
-        Me.XrLabel1.Text = "Note Pembelian "
+        Me.XrLabel1.Text = "Laporan Informasi Barang"
         Me.XrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         '
         'PageHeader
@@ -325,7 +325,7 @@ Partial Public Class rptLaporanDataBarang
         Me.XrTableCell2.Name = "XrTableCell2"
         Me.XrTableCell2.StylePriority.UseTextAlignment = False
         Me.XrTableCell2.Text = "Nama Barang"
-        Me.XrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.XrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         Me.XrTableCell2.Weight = 0.65547878060125275R
         '
         'XrTableCell3
@@ -334,7 +334,7 @@ Partial Public Class rptLaporanDataBarang
         Me.XrTableCell3.Name = "XrTableCell3"
         Me.XrTableCell3.StylePriority.UseTextAlignment = False
         Me.XrTableCell3.Text = "Kode Barang"
-        Me.XrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        Me.XrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         Me.XrTableCell3.Weight = 0.57393496623258677R
         '
         'XrTableCell4
@@ -343,7 +343,7 @@ Partial Public Class rptLaporanDataBarang
         Me.XrTableCell4.Name = "XrTableCell4"
         Me.XrTableCell4.StylePriority.UseTextAlignment = False
         Me.XrTableCell4.Text = "Kategori"
-        Me.XrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        Me.XrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         Me.XrTableCell4.Weight = 0.43725312554090456R
         '
         'XrTableCell11
@@ -352,7 +352,7 @@ Partial Public Class rptLaporanDataBarang
         Me.XrTableCell11.Name = "XrTableCell11"
         Me.XrTableCell11.StylePriority.UseTextAlignment = False
         Me.XrTableCell11.Text = "Satuan"
-        Me.XrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        Me.XrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         Me.XrTableCell11.Weight = 0.4234184147254R
         '
         'XrTableCell5
@@ -361,7 +361,7 @@ Partial Public Class rptLaporanDataBarang
         Me.XrTableCell5.Name = "XrTableCell5"
         Me.XrTableCell5.StylePriority.UseTextAlignment = False
         Me.XrTableCell5.Text = "Harga Beli"
-        Me.XrTableCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        Me.XrTableCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         Me.XrTableCell5.Weight = 0.57782542892065292R
         '
         'XrTableCell1
@@ -374,7 +374,7 @@ Partial Public Class rptLaporanDataBarang
         Me.XrTableCell1.StylePriority.UseBorders = False
         Me.XrTableCell1.StylePriority.UseTextAlignment = False
         Me.XrTableCell1.Text = "Harga Jual"
-        Me.XrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        Me.XrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         Me.XrTableCell1.Weight = 0.56867980949259711R
         '
         'XrTableCell6
@@ -383,7 +383,7 @@ Partial Public Class rptLaporanDataBarang
         Me.XrTableCell6.Name = "XrTableCell6"
         Me.XrTableCell6.StylePriority.UseTextAlignment = False
         Me.XrTableCell6.Text = "Stok"
-        Me.XrTableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        Me.XrTableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         Me.XrTableCell6.Weight = 0.31786053028670369R
         '
         'XrTableCell14
@@ -392,8 +392,8 @@ Partial Public Class rptLaporanDataBarang
         Me.XrTableCell14.Name = "XrTableCell14"
         Me.XrTableCell14.StylePriority.UseTextAlignment = False
         Me.XrTableCell14.Text = "Kedaluwarsa"
-        Me.XrTableCell14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell14.Weight = 0.64573100777120962R
+        Me.XrTableCell14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.XrTableCell14.Weight = 0.5382684053384883R
         '
         'XrTableCell13
         '
@@ -401,8 +401,8 @@ Partial Public Class rptLaporanDataBarang
         Me.XrTableCell13.Name = "XrTableCell13"
         Me.XrTableCell13.StylePriority.UseTextAlignment = False
         Me.XrTableCell13.Text = "Keterangan"
-        Me.XrTableCell13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell13.Weight = 0.79981837116665133R
+        Me.XrTableCell13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.XrTableCell13.Weight = 0.90728097359937265R
         '
         'Toko_swalayanDataSet1
         '

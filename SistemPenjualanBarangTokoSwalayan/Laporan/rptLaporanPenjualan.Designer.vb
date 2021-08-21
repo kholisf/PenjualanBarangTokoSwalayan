@@ -20,17 +20,6 @@ Partial Public Class rptLaporanPenjualan
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
-        Me.XrTable3 = New DevExpress.XtraReports.UI.XRTable()
-        Me.XrTableRow3 = New DevExpress.XtraReports.UI.XRTableRow()
-        Me.XrTableCell10 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell12 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell15 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell16 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell17 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell18 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell19 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell20 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell21 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
@@ -51,7 +40,6 @@ Partial Public Class rptLaporanPenjualan
         Me.XrTableCell1 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell6 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell14 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell13 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.Toko_swalayanDataSet1 = New SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet()
         Me.View_notaPenjualanTableAdapter = New SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSetTableAdapters.view_notaPenjualanTableAdapter()
         Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
@@ -62,10 +50,20 @@ Partial Public Class rptLaporanPenjualan
         Me.XrTableCell9 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.View_NotePenjualan2TableAdapter1 = New SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSetTableAdapters.view_NotePenjualan2TableAdapter()
         Me.View_informasibarangTableAdapter1 = New SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSetTableAdapters.view_informasibarangTableAdapter()
-        CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.XrTable3 = New DevExpress.XtraReports.UI.XRTable()
+        Me.XrTableRow3 = New DevExpress.XtraReports.UI.XRTableRow()
+        Me.XrTableCell10 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell12 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell13 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell15 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell16 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell17 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell18 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell19 = New DevExpress.XtraReports.UI.XRTableCell()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Toko_swalayanDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail
@@ -76,116 +74,6 @@ Partial Public Class rptLaporanPenjualan
         Me.Detail.Name = "Detail"
         Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        '
-        'XrTable3
-        '
-        Me.XrTable3.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-            Or DevExpress.XtraPrinting.BorderSide.Right) _
-            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
-        Me.XrTable3.Dpi = 100.0!
-        Me.XrTable3.Font = New System.Drawing.Font("Times New Roman", 11.0!)
-        Me.XrTable3.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
-        Me.XrTable3.Name = "XrTable3"
-        Me.XrTable3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100.0!)
-        Me.XrTable3.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow3})
-        Me.XrTable3.SizeF = New System.Drawing.SizeF(727.0!, 30.0!)
-        Me.XrTable3.StylePriority.UseBorders = False
-        Me.XrTable3.StylePriority.UseFont = False
-        Me.XrTable3.StylePriority.UsePadding = False
-        Me.XrTable3.StylePriority.UseTextAlignment = False
-        Me.XrTable3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
-        'XrTableRow3
-        '
-        Me.XrTableRow3.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell10, Me.XrTableCell12, Me.XrTableCell15, Me.XrTableCell16, Me.XrTableCell17, Me.XrTableCell18, Me.XrTableCell19, Me.XrTableCell20, Me.XrTableCell21})
-        Me.XrTableRow3.Dpi = 100.0!
-        Me.XrTableRow3.Name = "XrTableRow3"
-        Me.XrTableRow3.Weight = 1.0R
-        '
-        'XrTableCell10
-        '
-        Me.XrTableCell10.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "view_informasibarang.NamaBarang")})
-        Me.XrTableCell10.Dpi = 100.0!
-        Me.XrTableCell10.Name = "XrTableCell10"
-        Me.XrTableCell10.StylePriority.UseTextAlignment = False
-        Me.XrTableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        Me.XrTableCell10.Weight = 0.65547878060125275R
-        '
-        'XrTableCell12
-        '
-        Me.XrTableCell12.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "view_informasibarang.KodeBarang")})
-        Me.XrTableCell12.Dpi = 100.0!
-        Me.XrTableCell12.Name = "XrTableCell12"
-        Me.XrTableCell12.StylePriority.UseTextAlignment = False
-        Me.XrTableCell12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell12.Weight = 0.57393496623258677R
-        '
-        'XrTableCell15
-        '
-        Me.XrTableCell15.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "view_informasibarang.Kategori")})
-        Me.XrTableCell15.Dpi = 100.0!
-        Me.XrTableCell15.Name = "XrTableCell15"
-        Me.XrTableCell15.StylePriority.UseTextAlignment = False
-        Me.XrTableCell15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell15.Weight = 0.43725312554090456R
-        '
-        'XrTableCell16
-        '
-        Me.XrTableCell16.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "view_informasibarang.Satuan")})
-        Me.XrTableCell16.Dpi = 100.0!
-        Me.XrTableCell16.Name = "XrTableCell16"
-        Me.XrTableCell16.StylePriority.UseTextAlignment = False
-        Me.XrTableCell16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell16.Weight = 0.4234184147254R
-        '
-        'XrTableCell17
-        '
-        Me.XrTableCell17.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "view_informasibarang.HargaBeli")})
-        Me.XrTableCell17.Dpi = 100.0!
-        Me.XrTableCell17.Name = "XrTableCell17"
-        Me.XrTableCell17.StylePriority.UseTextAlignment = False
-        Me.XrTableCell17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell17.Weight = 0.57782542892065292R
-        '
-        'XrTableCell18
-        '
-        Me.XrTableCell18.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-            Or DevExpress.XtraPrinting.BorderSide.Right) _
-            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
-        Me.XrTableCell18.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "view_informasibarang.HargaJual")})
-        Me.XrTableCell18.Dpi = 100.0!
-        Me.XrTableCell18.Name = "XrTableCell18"
-        Me.XrTableCell18.StylePriority.UseBorders = False
-        Me.XrTableCell18.StylePriority.UseTextAlignment = False
-        Me.XrTableCell18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell18.Weight = 0.56867980949259711R
-        '
-        'XrTableCell19
-        '
-        Me.XrTableCell19.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "view_informasibarang.Stok")})
-        Me.XrTableCell19.Dpi = 100.0!
-        Me.XrTableCell19.Name = "XrTableCell19"
-        Me.XrTableCell19.StylePriority.UseTextAlignment = False
-        Me.XrTableCell19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell19.Weight = 0.31786053028670369R
-        '
-        'XrTableCell20
-        '
-        Me.XrTableCell20.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "view_informasibarang.Kedaluwarsa")})
-        Me.XrTableCell20.Dpi = 100.0!
-        Me.XrTableCell20.Name = "XrTableCell20"
-        Me.XrTableCell20.StylePriority.UseTextAlignment = False
-        Me.XrTableCell20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell20.Weight = 0.64573100777120962R
-        '
-        'XrTableCell21
-        '
-        Me.XrTableCell21.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "view_informasibarang.Keterangan")})
-        Me.XrTableCell21.Dpi = 100.0!
-        Me.XrTableCell21.Name = "XrTableCell21"
-        Me.XrTableCell21.StylePriority.UseTextAlignment = False
-        Me.XrTableCell21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell21.Weight = 0.79981837116665133R
         '
         'TopMargin
         '
@@ -305,7 +193,7 @@ Partial Public Class rptLaporanPenjualan
         Me.XrTable1.Name = "XrTable1"
         Me.XrTable1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100.0!)
         Me.XrTable1.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow1})
-        Me.XrTable1.SizeF = New System.Drawing.SizeF(727.0!, 30.0!)
+        Me.XrTable1.SizeF = New System.Drawing.SizeF(727.0001!, 30.0!)
         Me.XrTable1.StylePriority.UseBorders = False
         Me.XrTable1.StylePriority.UseFont = False
         Me.XrTable1.StylePriority.UsePadding = False
@@ -314,7 +202,7 @@ Partial Public Class rptLaporanPenjualan
         '
         'XrTableRow1
         '
-        Me.XrTableRow1.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell2, Me.XrTableCell3, Me.XrTableCell4, Me.XrTableCell11, Me.XrTableCell5, Me.XrTableCell1, Me.XrTableCell6, Me.XrTableCell14, Me.XrTableCell13})
+        Me.XrTableRow1.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell2, Me.XrTableCell3, Me.XrTableCell4, Me.XrTableCell11, Me.XrTableCell5, Me.XrTableCell1, Me.XrTableCell6, Me.XrTableCell14})
         Me.XrTableRow1.Dpi = 100.0!
         Me.XrTableRow1.Name = "XrTableRow1"
         Me.XrTableRow1.Weight = 1.0R
@@ -324,7 +212,7 @@ Partial Public Class rptLaporanPenjualan
         Me.XrTableCell2.Dpi = 100.0!
         Me.XrTableCell2.Name = "XrTableCell2"
         Me.XrTableCell2.StylePriority.UseTextAlignment = False
-        Me.XrTableCell2.Text = "Nama Barang"
+        Me.XrTableCell2.Text = "Tanggal"
         Me.XrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         Me.XrTableCell2.Weight = 0.65547878060125275R
         '
@@ -333,7 +221,7 @@ Partial Public Class rptLaporanPenjualan
         Me.XrTableCell3.Dpi = 100.0!
         Me.XrTableCell3.Name = "XrTableCell3"
         Me.XrTableCell3.StylePriority.UseTextAlignment = False
-        Me.XrTableCell3.Text = "Kode Barang"
+        Me.XrTableCell3.Text = "Nomor Transaksi"
         Me.XrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
         Me.XrTableCell3.Weight = 0.57393496623258677R
         '
@@ -342,27 +230,27 @@ Partial Public Class rptLaporanPenjualan
         Me.XrTableCell4.Dpi = 100.0!
         Me.XrTableCell4.Name = "XrTableCell4"
         Me.XrTableCell4.StylePriority.UseTextAlignment = False
-        Me.XrTableCell4.Text = "Kategori"
+        Me.XrTableCell4.Text = "Potongan"
         Me.XrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell4.Weight = 0.43725312554090456R
+        Me.XrTableCell4.Weight = 0.50889451045496481R
         '
         'XrTableCell11
         '
         Me.XrTableCell11.Dpi = 100.0!
         Me.XrTableCell11.Name = "XrTableCell11"
         Me.XrTableCell11.StylePriority.UseTextAlignment = False
-        Me.XrTableCell11.Text = "Satuan"
+        Me.XrTableCell11.Text = "Jumlah Item"
         Me.XrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell11.Weight = 0.4234184147254R
+        Me.XrTableCell11.Weight = 0.35177702981133979R
         '
         'XrTableCell5
         '
         Me.XrTableCell5.Dpi = 100.0!
         Me.XrTableCell5.Name = "XrTableCell5"
         Me.XrTableCell5.StylePriority.UseTextAlignment = False
-        Me.XrTableCell5.Text = "Harga Beli"
+        Me.XrTableCell5.Text = "Total Penjualan"
         Me.XrTableCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell5.Weight = 0.57782542892065292R
+        Me.XrTableCell5.Weight = 0.65663109924707153R
         '
         'XrTableCell1
         '
@@ -373,36 +261,27 @@ Partial Public Class rptLaporanPenjualan
         Me.XrTableCell1.Name = "XrTableCell1"
         Me.XrTableCell1.StylePriority.UseBorders = False
         Me.XrTableCell1.StylePriority.UseTextAlignment = False
-        Me.XrTableCell1.Text = "Harga Jual"
+        Me.XrTableCell1.Text = "Total pembayaran"
         Me.XrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell1.Weight = 0.56867980949259711R
+        Me.XrTableCell1.Weight = 0.68330627721958326R
         '
         'XrTableCell6
         '
         Me.XrTableCell6.Dpi = 100.0!
         Me.XrTableCell6.Name = "XrTableCell6"
         Me.XrTableCell6.StylePriority.UseTextAlignment = False
-        Me.XrTableCell6.Text = "Stok"
+        Me.XrTableCell6.Text = "Jumlah Uang"
         Me.XrTableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell6.Weight = 0.31786053028670369R
+        Me.XrTableCell6.Weight = 0.733380478833423R
         '
         'XrTableCell14
         '
         Me.XrTableCell14.Dpi = 100.0!
         Me.XrTableCell14.Name = "XrTableCell14"
         Me.XrTableCell14.StylePriority.UseTextAlignment = False
-        Me.XrTableCell14.Text = "Kedaluwarsa"
+        Me.XrTableCell14.Text = "Kode Pegawai"
         Me.XrTableCell14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell14.Weight = 0.64573100777120962R
-        '
-        'XrTableCell13
-        '
-        Me.XrTableCell13.Dpi = 100.0!
-        Me.XrTableCell13.Name = "XrTableCell13"
-        Me.XrTableCell13.StylePriority.UseTextAlignment = False
-        Me.XrTableCell13.Text = "Keterangan"
-        Me.XrTableCell13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.XrTableCell13.Weight = 0.79981837116665133R
+        Me.XrTableCell14.Weight = 0.83659769610892742R
         '
         'Toko_swalayanDataSet1
         '
@@ -463,6 +342,107 @@ Partial Public Class rptLaporanPenjualan
         '
         Me.View_informasibarangTableAdapter1.ClearBeforeFill = True
         '
+        'XrTable3
+        '
+        Me.XrTable3.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
+            Or DevExpress.XtraPrinting.BorderSide.Right) _
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrTable3.Dpi = 100.0!
+        Me.XrTable3.Font = New System.Drawing.Font("Times New Roman", 11.0!)
+        Me.XrTable3.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
+        Me.XrTable3.Name = "XrTable3"
+        Me.XrTable3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100.0!)
+        Me.XrTable3.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow3})
+        Me.XrTable3.SizeF = New System.Drawing.SizeF(727.0001!, 30.0!)
+        Me.XrTable3.StylePriority.UseBorders = False
+        Me.XrTable3.StylePriority.UseFont = False
+        Me.XrTable3.StylePriority.UsePadding = False
+        Me.XrTable3.StylePriority.UseTextAlignment = False
+        Me.XrTable3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
+        'XrTableRow3
+        '
+        Me.XrTableRow3.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell10, Me.XrTableCell12, Me.XrTableCell13, Me.XrTableCell15, Me.XrTableCell16, Me.XrTableCell17, Me.XrTableCell18, Me.XrTableCell19})
+        Me.XrTableRow3.Dpi = 100.0!
+        Me.XrTableRow3.Name = "XrTableRow3"
+        Me.XrTableRow3.Weight = 1.0R
+        '
+        'XrTableCell10
+        '
+        Me.XrTableCell10.Dpi = 100.0!
+        Me.XrTableCell10.Name = "XrTableCell10"
+        Me.XrTableCell10.StylePriority.UseTextAlignment = False
+        Me.XrTableCell10.Text = "Tanggal"
+        Me.XrTableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.XrTableCell10.Weight = 0.65547878060125275R
+        '
+        'XrTableCell12
+        '
+        Me.XrTableCell12.Dpi = 100.0!
+        Me.XrTableCell12.Name = "XrTableCell12"
+        Me.XrTableCell12.StylePriority.UseTextAlignment = False
+        Me.XrTableCell12.Text = "Nomor Transaksi"
+        Me.XrTableCell12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        Me.XrTableCell12.Weight = 0.57393496623258677R
+        '
+        'XrTableCell13
+        '
+        Me.XrTableCell13.Dpi = 100.0!
+        Me.XrTableCell13.Name = "XrTableCell13"
+        Me.XrTableCell13.StylePriority.UseTextAlignment = False
+        Me.XrTableCell13.Text = "Potongan"
+        Me.XrTableCell13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.XrTableCell13.Weight = 0.50889451045496481R
+        '
+        'XrTableCell15
+        '
+        Me.XrTableCell15.Dpi = 100.0!
+        Me.XrTableCell15.Name = "XrTableCell15"
+        Me.XrTableCell15.StylePriority.UseTextAlignment = False
+        Me.XrTableCell15.Text = "Jumlah Item"
+        Me.XrTableCell15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.XrTableCell15.Weight = 0.35177702981133979R
+        '
+        'XrTableCell16
+        '
+        Me.XrTableCell16.Dpi = 100.0!
+        Me.XrTableCell16.Name = "XrTableCell16"
+        Me.XrTableCell16.StylePriority.UseTextAlignment = False
+        Me.XrTableCell16.Text = "Total Penjualan"
+        Me.XrTableCell16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.XrTableCell16.Weight = 0.65663109924707153R
+        '
+        'XrTableCell17
+        '
+        Me.XrTableCell17.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
+            Or DevExpress.XtraPrinting.BorderSide.Right) _
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrTableCell17.Dpi = 100.0!
+        Me.XrTableCell17.Name = "XrTableCell17"
+        Me.XrTableCell17.StylePriority.UseBorders = False
+        Me.XrTableCell17.StylePriority.UseTextAlignment = False
+        Me.XrTableCell17.Text = "Total pembayaran"
+        Me.XrTableCell17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.XrTableCell17.Weight = 0.68330627721958326R
+        '
+        'XrTableCell18
+        '
+        Me.XrTableCell18.Dpi = 100.0!
+        Me.XrTableCell18.Name = "XrTableCell18"
+        Me.XrTableCell18.StylePriority.UseTextAlignment = False
+        Me.XrTableCell18.Text = "Jumlah Uang"
+        Me.XrTableCell18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.XrTableCell18.Weight = 0.733380478833423R
+        '
+        'XrTableCell19
+        '
+        Me.XrTableCell19.Dpi = 100.0!
+        Me.XrTableCell19.Name = "XrTableCell19"
+        Me.XrTableCell19.StylePriority.UseTextAlignment = False
+        Me.XrTableCell19.Text = "Kode Pegawai"
+        Me.XrTableCell19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        Me.XrTableCell19.Weight = 0.83659769610892742R
+        '
         'rptLaporanPenjualan
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportHeader, Me.PageHeader, Me.ReportFooter})
@@ -474,10 +454,10 @@ Partial Public Class rptLaporanPenjualan
         Me.PageWidth = 827
         Me.PaperKind = System.Drawing.Printing.PaperKind.A4
         Me.Version = "16.1"
-        CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Toko_swalayanDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -506,22 +486,20 @@ Partial Public Class rptLaporanPenjualan
     Friend WithEvents XrTableCell1 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTableCell6 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTableCell14 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTableCell13 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTable3 As DevExpress.XtraReports.UI.XRTable
-    Friend WithEvents XrTableRow3 As DevExpress.XtraReports.UI.XRTableRow
-    Friend WithEvents XrTableCell10 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTableCell12 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTableCell15 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTableCell16 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTableCell17 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTableCell18 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTableCell19 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTableCell20 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTableCell21 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTable2 As DevExpress.XtraReports.UI.XRTable
     Friend WithEvents XrTableRow2 As DevExpress.XtraReports.UI.XRTableRow
     Friend WithEvents XrTableCell7 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTableCell8 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTableCell9 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents View_informasibarangTableAdapter1 As SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSetTableAdapters.view_informasibarangTableAdapter
+    Friend WithEvents XrTable3 As DevExpress.XtraReports.UI.XRTable
+    Friend WithEvents XrTableRow3 As DevExpress.XtraReports.UI.XRTableRow
+    Friend WithEvents XrTableCell10 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents XrTableCell12 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents XrTableCell13 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents XrTableCell15 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents XrTableCell16 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents XrTableCell17 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents XrTableCell18 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents XrTableCell19 As DevExpress.XtraReports.UI.XRTableCell
 End Class

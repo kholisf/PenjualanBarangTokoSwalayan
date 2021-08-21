@@ -1,3 +1,3 @@
-﻿Public Class rptLaporanDataBarang
+﻿Public Class rptLaporanPenjualan
 
 End Class
