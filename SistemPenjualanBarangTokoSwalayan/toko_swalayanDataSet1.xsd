@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="toko_swalayanDataSet1" targetNamespace="http://tempuri.org/toko_swalayanDataSet1.xsd" xmlns:mstns="http://tempuri.org/toko_swalayanDataSet1.xsd" xmlns="http://tempuri.org/toko_swalayanDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="toko_swalayanConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="toko_swalayanConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SistemPenjualanBarangTokoSwalayan.My.MySettings.GlobalReference.Default.toko_swalayanConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_laporankasTableAdapter" GeneratorDataComponentClassName="view_laporankasTableAdapter" Name="view_laporankas" UserDataComponentName="view_laporankasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="toko_swalayanConnectionString (MySettings)" DbObjectName="toko_swalayan.view_laporankas" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Tanggal`, `NomorTransaksi`, `Uraian`, `Masuk`, `Keluar`, `Saldo`, `KodePegawai` FROM `toko_swalayan`.`view_laporankas`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Tanggal" DataSetColumn="Tanggal" />
+              <Mapping SourceColumn="NomorTransaksi" DataSetColumn="NomorTransaksi" />
+              <Mapping SourceColumn="Uraian" DataSetColumn="Uraian" />
+              <Mapping SourceColumn="Masuk" DataSetColumn="Masuk" />
+              <Mapping SourceColumn="Keluar" DataSetColumn="Keluar" />
+              <Mapping SourceColumn="Saldo" DataSetColumn="Saldo" />
+              <Mapping SourceColumn="KodePegawai" DataSetColumn="KodePegawai" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="toko_swalayanDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="toko_swalayanDataSet1" msprop:Generator_UserDSName="toko_swalayanDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="view_laporankas" msprop:Generator_TableClassName="view_laporankasDataTable" msprop:Generator_TableVarName="tableview_laporankas" msprop:Generator_TablePropName="view_laporankas" msprop:Generator_RowDeletingName="view_laporankasRowDeleting" msprop:Generator_RowChangingName="view_laporankasRowChanging" msprop:Generator_RowEvHandlerName="view_laporankasRowChangeEventHandler" msprop:Generator_RowDeletedName="view_laporankasRowDeleted" msprop:Generator_UserTableName="view_laporankas" msprop:Generator_RowChangedName="view_laporankasRowChanged" msprop:Generator_RowEvArgName="view_laporankasRowChangeEvent" msprop:Generator_RowClassName="view_laporankasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tanggal" msprop:Generator_ColumnVarNameInTable="columnTanggal" msprop:Generator_ColumnPropNameInRow="Tanggal" msprop:Generator_ColumnPropNameInTable="TanggalColumn" msprop:Generator_UserColumnName="Tanggal" type="xs:dateTime" />
+              <xs:element name="NomorTransaksi" msprop:Generator_ColumnVarNameInTable="columnNomorTransaksi" msprop:Generator_ColumnPropNameInRow="NomorTransaksi" msprop:Generator_ColumnPropNameInTable="NomorTransaksiColumn" msprop:Generator_UserColumnName="NomorTransaksi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Uraian" msprop:Generator_ColumnVarNameInTable="columnUraian" msprop:Generator_ColumnPropNameInRow="Uraian" msprop:Generator_ColumnPropNameInTable="UraianColumn" msprop:Generator_UserColumnName="Uraian">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Masuk" msprop:Generator_ColumnVarNameInTable="columnMasuk" msprop:Generator_ColumnPropNameInRow="Masuk" msprop:Generator_ColumnPropNameInTable="MasukColumn" msprop:Generator_UserColumnName="Masuk" type="xs:double" />
+              <xs:element name="Keluar" msprop:Generator_ColumnVarNameInTable="columnKeluar" msprop:Generator_ColumnPropNameInRow="Keluar" msprop:Generator_ColumnPropNameInTable="KeluarColumn" msprop:Generator_UserColumnName="Keluar" type="xs:double" />
+              <xs:element name="Saldo" msprop:Generator_ColumnVarNameInTable="columnSaldo" msprop:Generator_ColumnPropNameInRow="Saldo" msprop:Generator_ColumnPropNameInTable="SaldoColumn" msprop:Generator_UserColumnName="Saldo" type="xs:double" />
+              <xs:element name="KodePegawai" msprop:Generator_ColumnVarNameInTable="columnKodePegawai" msprop:Generator_ColumnPropNameInRow="KodePegawai" msprop:Generator_ColumnPropNameInTable="KodePegawaiColumn" msprop:Generator_UserColumnName="KodePegawai">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:view_laporankas" />
+      <xs:field xpath="mstns:NomorTransaksi" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

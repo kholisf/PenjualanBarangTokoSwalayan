@@ -12,15 +12,6 @@
                 GridControl1.DataSource = Tampung
                 GridviewEditTampilan(GridView1, "KodePegawai", "Masuk,Keluar,Saldo", "Masuk,Keluar")
 
-            Case 1
-
-                'If txtKodePemasok.Text = "" Or txtNamaPemasok.Text = "" Then
-                '    MessageBox.Show("Pilih dahulu pemasok!", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                '    Exit Sub
-                'End If
-                'Tampung = EksekusiQuery("select a.NomorTransaksi,a.Tanggal,a.KodePemasok,b.NamaPemasok,sum(c.HargaObat*c.Jumlah) as TotalPembelian,a.Keterangan,a.KodePegawai from (pembelian a inner join pemasok b on a.KodePemasok=b.KodePemasok inner join pembelian_detil c on a.NomorTransaksi=c.NomorTransaksi) where a.KodePemasok='" & txtKodePemasok.Text & "' group by a.NomorTransaksi;")
-                'GridControl1.DataSource = Tampung
-                'GridviewEditTampilan(GridView1, "KodePemasok,KodePegawai", "TotalPembelian", "TotalPembelian")
         End Select
 
 
@@ -45,7 +36,7 @@
     End Sub
     Sub TampilInfoSaldo()
 
-        Dim saldo = EksekusiQuery("select sum(Masuk-Keluar) as Saldo from kas").Select()
+        Dim saldo = EksekusiQuery("select if (sum(Masuk-Keluar)<>0,sum(Masuk-Keluar),0) as Saldo from kas").Select()
 
 
         txtInfo.Text = "Saldo saat ini: Rp." & Format(saldo(0).Item("Saldo"), "n0") & ",-"
@@ -89,7 +80,12 @@
 
 
     Sub cetak()
-        GridControl1.ShowRibbonPrintPreview()
+        Dim saldo = EksekusiQuery("select if (sum(Masuk-Keluar)<>0,sum(Masuk-Keluar),0) as Saldo from kas").Select()
+
+
+
+
+        ReportlaporanKas("Rp." & Format(saldo(0).Item("Saldo"), "n0") & ",-", txtTanggalAwal.DateTime, txtTanggalAkhir.DateTime)
 
     End Sub
     'Sub DetilLaporan()

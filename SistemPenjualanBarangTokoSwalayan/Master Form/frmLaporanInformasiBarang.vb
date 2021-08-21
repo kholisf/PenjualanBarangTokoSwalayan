@@ -53,7 +53,7 @@
                 GridControl1.DataSource = Tampung
                 GridviewEditTampilan(GridView1, , "HargaJual,HargaBeli,Stok")
             Case 2
-                Tampung = EksekusiQuery("select * from barang where Kategori='" & txtKategoriBarang.Text & "'KodeBarang<>'0000000000'")
+                Tampung = EksekusiQuery("select * from barang where Kategori='" & txtKategoriBarang.Text & "'and KodeBarang<>'0000000000'")
                 GridControl1.DataSource = Tampung
                 GridviewEditTampilan(GridView1, , "HargaJual,HargaBeli,Stok")
         End Select

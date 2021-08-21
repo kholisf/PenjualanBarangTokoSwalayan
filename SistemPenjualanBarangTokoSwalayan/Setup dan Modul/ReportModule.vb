@@ -79,4 +79,14 @@ Module ReportModule
         End Using
 
     End Sub
+
+    Sub ReportlaporanKas(ByVal saldo As String, ByVal tanggalawal As Date, ByVal tanggalakhir As Date)
+        EksekusiQuery("create or replace view view_laporanKas as select Tanggal,NomorTransaksi,Uraian,Masuk,Keluar,Saldo,KodePegawai from kas where Tanggal>='" & Format(tanggalawal, "yyyy-MM-dd ") & " 00:00:00' and Tanggal<='" & Format(tanggalakhir, "yyyy-MM-dd HH:mm:ss") & "'")
+        Dim rpt As New rptLaporanKas2
+        rpt.txtSaldoSaatini.Text = " " & saldo
+        rpt.txtTanggal.Text = " " & Format(Now, " dddd, dd MMMM yyyy")
+        Using PrintTool As New ReportPrintTool(rpt)
+            PrintTool.ShowRibbonPreviewDialog()
+        End Using
+    End Sub
 End Module
