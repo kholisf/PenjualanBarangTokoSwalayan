@@ -159,6 +159,30 @@ Namespace My
                 Return CType(Me("toko_swalayanConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property sUsernameServer() As String
+            Get
+                Return CType(Me("sUsernameServer"),String)
+            End Get
+            Set
+                Me("sUsernameServer") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property sPasswordServer() As String
+            Get
+                Return CType(Me("sPasswordServer"),String)
+            End Get
+            Set
+                Me("sPasswordServer") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

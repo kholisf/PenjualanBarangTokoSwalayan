@@ -20,8 +20,8 @@ Public Class frmSetupKonfigurasiServer
     Sub TampilData()
 
         txtNamaServer.Text = My.Settings.sNamaServer
-        txtUsername.Text = My.Settings.sUsername
-        txtPassword.Text = My.Settings.sPassword
+        txtUsername.Text = My.Settings.sUsernameServer
+        txtPassword.Text = My.Settings.sPasswordServer
         txtNamaDatabase.Text = My.Settings.sNamaDatabase
 
 
@@ -57,8 +57,8 @@ Public Class frmSetupKonfigurasiServer
             Kon.Open()
             Kon.Close()
             My.Settings.sNamaServer = txtNamaServer.Text
-            My.Settings.sUsername = txtUsername.Text
-            My.Settings.sPassword = txtPassword.Text
+            My.Settings.sUsernameServer = txtUsername.Text
+            My.Settings.sPasswordServer = txtPassword.Text
             My.Settings.sNamaDatabase = txtNamaDatabase.Text
             My.Settings.sKoneksi = "server=" & txtNamaServer.Text & ";user id=" & txtUsername.Text & "; password=" & txtPassword.Text & "; database=" & txtNamaDatabase.Text & " ;convert zero datetime=true"
             My.Settings.Save()
