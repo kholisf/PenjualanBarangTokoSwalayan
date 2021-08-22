@@ -45,6 +45,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon APlikasi.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -443,6 +446,7 @@
     <None Include="Resources\icons8_General_Ledger_400px.png" />
     <None Include="Resources\icons8_General_Ledger_500px.png" />
     <None Include="Resources\icons8_Ingredients_512px_2.png" />
+    <Content Include="Icon APlikasi.ico" />
     <Content Include="Resources\icons8_management_400px.png" />
     <None Include="Resources\icons8_supplier_512px.png" />
     <None Include="Resources\icons8_management_400px_1.png" />

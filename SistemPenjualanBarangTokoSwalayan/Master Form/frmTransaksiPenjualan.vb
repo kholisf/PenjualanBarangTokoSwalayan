@@ -36,13 +36,6 @@ Public Class frmTransaksiPenjualan
         GridControl1.DataSource = Tampung
 
         GridviewEditTampilan(GridView1, , "HargaSatuan,Jumlah,JumlahDiskon,JumlahHarga", "JumlahDiskon,JumlahHarga", "KodeBarang,NamaBarang,HargaSatuan,JumlahDiskon,JumlahHarga")
-        'With GridView1.GroupSummary.Add(DevExpress.Data.SummaryItemType.Sum, "JumlahHarga")
-        '    .ShowInGroupColumnFooter = GridView1.Columns("JumlahHarga")
-        '    .DisplayFormat = "{0:n" & Val("JumlahHarga") & "}"
-        'End With
-        'GridView1.OptionsView.ShowFooter = True
-
-        'GridView1.Columns("JumlahHarga").SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Sum, "{0:n" & Val("JumlahHarga") & "}")
         GridView1.Columns("Jumlah").OptionsColumn.AllowEdit = True
         GridView1.Columns("PersenDiskon").OptionsColumn.AllowEdit = True
 
@@ -84,7 +77,7 @@ Public Class frmTransaksiPenjualan
             MessageBox.Show("Kode Barang, Nama Barang, Harga Satuan, dan Jumlah wajib diisi!", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
-        If txtDiskon.Value > 100 And txtDiskon.Value <= 0 Then
+        If txtDiskon.Value >= 100 Or txtDiskon.Value < 0 Then
             MessageBox.Show("Persen Diskon tidak valid!", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
@@ -164,12 +157,12 @@ Public Class frmTransaksiPenjualan
             MessageBox.Show("Jumlah Uang Masih Kurang!", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
-
+        Dim kodekonsumen As String = KodeOtomatis("konsumen", "KodeKonsumen", "KSM", "0000000")
         Dim TotalPenjualan As Double = 0
         Dim UangKembalian As Double = 0
-        
+        EksekusiQuery("insert into konsumen (KodeKonsumen) values('" & kodekonsumen & "')")
 
-        EksekusiQuery(" INSERT INTO penjualan(NomorTransaksi,Tanggal,Potongan,JumlahUang,KodePegawai) VALUES ('" & txtNomorTransaksi.Text & "','" & Format(txtTanggal.DateTime, "yyyy-MM-dd HH:mm:ss").Replace(".", ";") & "'," & txtPotongan.Value & "," & txtJumlahUang.Value & ",'" & My.Settings.sKodePegawai & "')")
+        EksekusiQuery(" INSERT INTO penjualan(NomorTransaksi,Tanggal,Potongan,JumlahUang,KodePegawai,KodeKonsumen) VALUES ('" & txtNomorTransaksi.Text & "','" & Format(txtTanggal.DateTime, "yyyy-MM-dd HH:mm:ss").Replace(".", ";") & "'," & txtPotongan.Value + GridView1.Columns("JumlahDiskon").SummaryItem.SummaryValue & "," & txtJumlahUang.Value & ",'" & My.Settings.sKodePegawai & "', '" & kodekonsumen & "')")
 
         For Each Isi In Tampung.Select()
             EksekusiQuery("INSERT INTO penjualan_detil(NomorTransaksi,KodeBarang,HargaSatuan,Jumlah,PersenDiskon) VALUES ('" & txtNomorTransaksi.Text & "','" & Isi.Item("KodeBarang") & "'," & Isi.Item("HargaSatuan") & "," & Isi.Item("Jumlah") & "," & Isi.Item("PersenDiskon") & ")")
@@ -193,9 +186,21 @@ Public Class frmTransaksiPenjualan
         
         MessageBox.Show("Sukses disimpan!!" & vbCrLf & "Uang Kembalian  : Rp. " & Format(UangKembalian, "n0") & ",-", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
         If MessageBox.Show("Transaksi berhasil. Cetak nota transaksi ?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-            ReportNotaPenjualan(txtNomorTransaksi.Text, Format(txtTanggal.DateTime, "yyyy-MM-dd"), txtJumlahUang.Value, UangKembalian, True)
+            ReportNotaPenjualan2(txtNomorTransaksi.Text, Format(txtTanggal.DateTime, "yyyy-MM-dd"), txtJumlahUang.Value, UangKembalian, True, txtPotongan.Value, TotalPenjualan, kodekonsumen)
         End If
         RefreshData()
+
+    End Sub
+
+    Sub hitungkembalian()
+        Dim kembalian As Double = txtJumlahUang.Value - (GridView1.Columns("JumlahHarga").SummaryItem.SummaryValue - txtPotongan.Value)
+        If kembalian <= 0 Then
+            txtKembalianuang.Text = "Kembalian = Rp. 0 ,-"
+
+        Else
+            txtKembalianuang.Text = "Kembalian = Rp. " & Format(kembalian, "n0") & ",-"
+        End If
+
 
     End Sub
 
@@ -245,7 +250,14 @@ Public Class frmTransaksiPenjualan
 
                     .SetFocusedRowCellValue("JumlahDiskon", Val(.GetFocusedRowCellValue("HargaSatuan")) * Val(.GetFocusedRowCellValue("Jumlah")) * Val((.GetFocusedRowCellValue("PersenDiskon") / 100)))
                     .SetFocusedRowCellValue("JumlahHarga", Val(.GetFocusedRowCellValue("HargaSatuan")) * Val(.GetFocusedRowCellValue("Jumlah")) - Val(.GetFocusedRowCellValue("JumlahDiskon")))
+
                 Case "Persen Diskon"
+                    If Val(.GetFocusedRowCellValue("PersenDiskon")) >= 100 Or Val(.GetFocusedRowCellValue("PersenDiskon")) < 0 Then
+
+                        MessageBox.Show("Persen Diskon tidak valid!", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        .SetFocusedRowCellValue("PersenDiskon", 0)
+
+                    End If
 
                     .SetFocusedRowCellValue("JumlahDiskon", Val(.GetFocusedRowCellValue("HargaSatuan")) * Val(.GetFocusedRowCellValue("Jumlah")) * Val((.GetFocusedRowCellValue("PersenDiskon") / 100)))
                     .SetFocusedRowCellValue("JumlahHarga", Val(.GetFocusedRowCellValue("HargaSatuan")) * Val(.GetFocusedRowCellValue("Jumlah")) - Val(.GetFocusedRowCellValue("JumlahDiskon")))
@@ -303,6 +315,12 @@ Public Class frmTransaksiPenjualan
     End Sub
 
     Private Sub txtPotongan_EditValueChanged(sender As Object, e As EventArgs) Handles txtPotongan.EditValueChanged
+        TampilInfo()
+        hitungkembalian()
+    End Sub
+
+    Private Sub txtJumlahUang_EditValueChanged(sender As Object, e As EventArgs) Handles txtJumlahUang.EditValueChanged
+        hitungkembalian()
         TampilInfo()
     End Sub
 End Class

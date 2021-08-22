@@ -6,59 +6,7 @@ SistemPenjualanBarangTokoSwalayan
 </name>
 </assembly>
 <members>
-<member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1.view_laporankasDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1.view_laporankasRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1.view_laporankasRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.view_laporankasTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.TableAdapterManager.UpdateAll(SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="P:SistemPenjualanBarangTokoSwalayan.My.Resources.Resources.ResourceManager">
+<member name="P:SistemPenjualanBarangTokoSwalayan.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
@@ -158,6 +106,74 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
 </member><member name="T:SistemPenjualanBarangTokoSwalayan.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1.view_laporankasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1.view_noteuntukkonsumenDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1.view_laporankasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1.view_noteuntukkonsumenRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1.view_laporankasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1.view_noteuntukkonsumenRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.view_laporankasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.view_noteuntukkonsumenTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.TableAdapterManager.UpdateAll(SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet1TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
 </member><member name="T:SistemPenjualanBarangTokoSwalayan.toko_swalayanDataSet.view_notaPenjualanDataTable">
 	<summary>

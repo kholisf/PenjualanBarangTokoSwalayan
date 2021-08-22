@@ -62,6 +62,7 @@ Partial Class frmTransaksiPenjualan
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtJumlah = New DevExpress.XtraEditors.SpinEdit()
+        Me.txtKembalianuang = New System.Windows.Forms.Label()
         CType(Me.ImageCollection1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridSplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -160,7 +161,7 @@ Partial Class frmTransaksiPenjualan
         Me.GridControl1.Location = New System.Drawing.Point(10, 320)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(559, 99)
+        Me.GridControl1.Size = New System.Drawing.Size(766, 99)
         Me.GridControl1.TabIndex = 13
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -225,14 +226,14 @@ Partial Class frmTransaksiPenjualan
         Me.barDockControlTop.CausesValidation = False
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlTop.Size = New System.Drawing.Size(581, 0)
+        Me.barDockControlTop.Size = New System.Drawing.Size(788, 0)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.barDockControlBottom.Location = New System.Drawing.Point(0, 499)
-        Me.barDockControlBottom.Size = New System.Drawing.Size(581, 25)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(788, 25)
         '
         'barDockControlLeft
         '
@@ -245,7 +246,7 @@ Partial Class frmTransaksiPenjualan
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(581, 0)
+        Me.barDockControlRight.Location = New System.Drawing.Point(788, 0)
         Me.barDockControlRight.Size = New System.Drawing.Size(0, 499)
         '
         'txtPotongan
@@ -268,7 +269,7 @@ Partial Class frmTransaksiPenjualan
         '
         Me.txtInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtInfo.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtInfo.Location = New System.Drawing.Point(303, 461)
+        Me.txtInfo.Location = New System.Drawing.Point(510, 461)
         Me.txtInfo.Name = "txtInfo"
         Me.txtInfo.Size = New System.Drawing.Size(266, 29)
         Me.txtInfo.TabIndex = 46
@@ -279,7 +280,7 @@ Partial Class frmTransaksiPenjualan
         '
         Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(318, 432)
+        Me.Label8.Location = New System.Drawing.Point(525, 432)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(78, 13)
         Me.Label8.TabIndex = 52
@@ -289,7 +290,7 @@ Partial Class frmTransaksiPenjualan
         '
         Me.txtJumlahUang.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtJumlahUang.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.txtJumlahUang.Location = New System.Drawing.Point(402, 429)
+        Me.txtJumlahUang.Location = New System.Drawing.Point(609, 429)
         Me.txtJumlahUang.Name = "txtJumlahUang"
         Me.txtJumlahUang.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.txtJumlahUang.Properties.DisplayFormat.FormatString = "d"
@@ -473,11 +474,24 @@ Partial Class frmTransaksiPenjualan
         Me.txtJumlah.Size = New System.Drawing.Size(153, 20)
         Me.txtJumlah.TabIndex = 6
         '
+        'txtKembalianuang
+        '
+        Me.txtKembalianuang.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtKembalianuang.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtKembalianuang.Location = New System.Drawing.Point(564, 285)
+        Me.txtKembalianuang.Name = "txtKembalianuang"
+        Me.txtKembalianuang.Size = New System.Drawing.Size(214, 29)
+        Me.txtKembalianuang.TabIndex = 57
+        Me.txtKembalianuang.Text = "Kembalian = Rp. 0 ,-"
+        Me.txtKembalianuang.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'frmTransaksiPenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(581, 524)
+        Me.ClientSize = New System.Drawing.Size(788, 524)
+        Me.Controls.Add(Me.txtKembalianuang)
         Me.Controls.Add(Me.GroupControl2)
         Me.Controls.Add(Me.GroupControl1)
         Me.Controls.Add(Me.Label8)
@@ -561,4 +575,5 @@ Partial Class frmTransaksiPenjualan
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents BarButtonItem2 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents txtTanggal As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents txtKembalianuang As System.Windows.Forms.Label
 End Class
