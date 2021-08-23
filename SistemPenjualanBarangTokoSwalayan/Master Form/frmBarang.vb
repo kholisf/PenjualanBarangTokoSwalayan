@@ -1,7 +1,6 @@
 ﻿Imports DevExpress.XtraGrid.Views.Base
 Imports System.Globalization
 Public Class frmBarang
-
     Private Sub frmBarang_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         Select Case e.KeyCode
             Case e.Control And Keys.Enter
@@ -16,7 +15,6 @@ Public Class frmBarang
                 HapusData()
             Case e.Control And Keys.P
                 CetakData()
-
         End Select
     End Sub
 
