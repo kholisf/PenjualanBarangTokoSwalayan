@@ -17,7 +17,6 @@ Public Class frmBarang
                 CetakData()
         End Select
     End Sub
-
     Private Sub frmBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.KeyPreview = True
         txtKodeBarang.Properties.ReadOnly = True
@@ -44,7 +43,6 @@ Public Class frmBarang
 
         txtNamaBarang.Focus()
     End Sub
-
     Sub SimpanData()
         If txtKodeBarang.Text = "" Or txtNamaBarang.Text = "" Or txtKategori.Text = "" Or txtSatuan.Text = "" Or txtHargaBeli.Value <= 0 Or txtHargaJual.Value <= 0 Or txtStok.Value < 0 Then
             MessageBox.Show("Kode Barang, Nama Barang, Kategori, Satuan, Harga beli, Harga Jual, Stok dan Kedaluwarsa wajib di isi!", "validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -138,7 +136,6 @@ Public Class frmBarang
         Me.Close()
 
     End Sub
-
     Private Sub txtKategori_GotFocus1(sender As Object, e As EventArgs) Handles txtKategori.GotFocus
         ComboboxTambahItem("barang", "Kategori", txtKategori)
     End Sub

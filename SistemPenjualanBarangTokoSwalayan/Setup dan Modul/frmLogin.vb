@@ -23,7 +23,6 @@ Public Class frmLogin
                 frmSetupKonfigurasiServer.ShowDialog()
             End If
         End Try
-
     End Sub
     Sub tampilpassword()
         If CheckEdit1.CheckState = CheckState.Checked Then
@@ -41,23 +40,18 @@ Public Class frmLogin
         End Select
     End Sub
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         Me.KeyPreview = True
         txtUsername.Focus()
     End Sub
-
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
         login()
     End Sub
     Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles SimpleButton3.Click
         Application.Exit()
     End Sub
-    
-    
     Private Sub CheckEdit1_CheckStateChanged1(sender As Object, e As EventArgs) Handles CheckEdit1.CheckStateChanged
         tampilpassword()
     End Sub
-
     Private Sub txtPassword_GotFocus1(sender As Object, e As EventArgs) Handles txtPassword.GotFocus
         tampilpassword()
     End Sub
